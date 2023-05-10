@@ -17,7 +17,7 @@ $tablet: 768px;
 $distance-between-orbits-mobile: 30px;
 $distance-between-orbits-tablet: 40px;
 
-$year-in-second : 10; // 1 Earth year = 10 sec
+$year-in-second : 30; // 1 Earth year = 30 sec
 
 @function revolution($pl-year-in-days){
   @return $pl-year-in-days * $year-in-second / 365.2563 + s  //Earth reference
@@ -34,8 +34,8 @@ $year-in-second : 10; // 1 Earth year = 10 sec
 }
  
 $sun: 30px;
-$base-orb : 60px;
-$distance-between-orbits: 60px;
+$base-orb : 70px;
+$distance-between-orbits: 70px;
 $mercury-orb : $base-orb; $mercury-pl: 4px; 
 $venus-orb : $mercury-orb + $distance-between-orbits; $venus-pl: 8px; 
 $earth-orb : $venus-orb + $distance-between-orbits; $earth-pl: 6px; 
@@ -71,7 +71,7 @@ body{
     width:2px;
     top:-2px;
     background:white;
-    box-shadow: stars(1000, 1800);
+    box-shadow: stars(200, 1800);
     border-radius:100px;
   }
   margin:auto;
@@ -279,8 +279,8 @@ body{
 .neptune{
   z-index: 20;
   cursor: pointer;
-  height: $neptune-orb ;
-  width: $neptune-orb ;
+  height: $neptune-orb;
+  width: $neptune-orb;
   margin-top: -$neptune-orb / 2;
   margin-left: -$neptune-orb / 2;
   animation: orb revolution(59802) linear infinite;
@@ -315,24 +315,7 @@ body{
   }
 }
 
-.pluto{
-  z-index: 10;
-  cursor: pointer;
-  height: $pluto-orb;
-  width: $pluto-orb;
-  margin-top: -$pluto-orb / 2 ;
-  margin-left: -$pluto-orb / 2 ;
-  animation: orb revolution(90580) linear infinite;
- 
-  @extend %planet-hover;
-  &:before{
-    height:$pluto-pl;
-    width:$pluto-pl;
-    background:#fff;
-    margin-top: -$pluto-pl / 2;
-    margin-left: -$pluto-pl / 2;
-  }
-}
+
 
 .hide{
   display:none;
