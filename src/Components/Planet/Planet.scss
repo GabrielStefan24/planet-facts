@@ -1,0 +1,108 @@
+
+
+.section-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 1200px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .planet-container {
+    max-width: 1024px;
+    display: grid;
+    grid-template-areas: 
+      'image description'
+      'image buttons';
+    grid-template-columns: 2.2fr 1fr;
+    padding: 2rem;
+   
+  }
+  
+  .planet-image {
+    grid-area: image;
+    display: flex;
+    margin-top: 4rem;
+   
+    & img{
+        margin: 0 auto;
+        width: 60%;
+        @media(min-width:768px){
+        width: 50%;
+        }
+    }
+ 
+  }
+  
+  .planet-description {
+    text-align: center;
+    margin-top: 2rem;
+    grid-area: description;
+    padding: 0 0.4rem;
+    color: hsla(0,0%,100%,0.75);
+   
+    & h2{
+      color: white;
+      font-size: clamp(2.8rem,4vw,6rem);
+      font-family: "Antonio",sans-serif;
+      font-weight: 400;
+   
+    }
+    & p{
+      font-family: "League Spartan",sans-serif;
+      font-weight: 200;
+      font-size: clamp(15px,1.4vw,18px);
+      @media(min-width:768px){
+        text-align: left;
+      }
+    }
+
+  }
+  
+  .planet-buttons {
+    grid-area: buttons;
+  }
+  
+  /* Change layout for smaller screens */
+  @media (max-width: 600px) {
+    .planet-container {
+      grid-template-areas: 
+        'image'
+        'description'
+        'buttons';
+      grid-template-columns: 1fr;
+    }
+  }
+  .planet-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 0.6rem;
+   
+  }
+  .item{
+    border: 1px solid #37374e ;
+   
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    & h3 {
+      color: #838391;
+      font-size: clamp(11px,2vw,18px);
+      font-family: "League Spartan",sans-serif;
+      letter-spacing: 1px;
+    }
+    & p {
+      color: white;
+      font-size: clamp(20px,2.5vw,26px);
+      font-weight: 500;
+      font-family: "Antonio",sans-serif;
+      letter-spacing: 1px ;
+    }
+  }

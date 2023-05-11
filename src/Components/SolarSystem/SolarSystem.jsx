@@ -1,20 +1,36 @@
-
-import './SolarSystem.scss';
+import { Link } from "react-router-dom";
+import "./SolarSystem.scss";
 
 const SolarSystem = () => {
   return (
     <div className="solar-syst">
       <div className="sun"></div>
-      <div className="mercury"></div>
-      <div className="venus"></div>
-      <div className="earth"></div>
-      <div className="mars"></div>
-      <div className="jupiter"></div>
-      <div className="saturn"></div>
-      <div className="uranus"></div>
-      <div className="neptune"></div>
-      <div className="pluto"></div>
-      <div className='asteroids-belt'></div>
+      <Link to="/mercury">
+        <div className="mercury"></div>
+      </Link>
+      <Link to="/venus">
+        <div className="venus"></div>
+      </Link>
+      <Link to="/earth">
+        <div className="earth"></div>
+      </Link>
+      <Link to="/jupiter">
+        <div className="jupiter"></div>
+      </Link>
+      <Link to="/saturn">
+        <div className="saturn"></div>
+      </Link>
+      <Link to="/uranus">
+        <div className="uranus"></div>
+      </Link>
+      <Link to="/neptune">
+        <div className="neptune"></div>
+      </Link>
+      <Link to="/pluto">
+        <div className="pluto"></div>
+      </Link>
+
+      <div className="asteroids-belt"></div>
     </div>
   );
 };

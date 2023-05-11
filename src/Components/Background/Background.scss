@@ -1,5 +1,32 @@
+@function alphaRandom(){
+    @return random(1000)*.001;
+  }
+
+@function star($s, $max-area, $min-area : 0, $star-size : 0){
+    $star : #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, alphaRandom()); 
+    @for $i from 1 to $s{
+      $star: '#{$star} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})'
+    }
+    @return unquote($star);
+  }
+
 .stars{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    &:after{
+        content:"";
+        position:absolute;
+        height:2px;
+        width:2px;
+        top:-2px;
+        background:white;
+        box-shadow: star(1400, 3800);
+        border-radius:100px;
+       
+      }
+   
+     
+      height:100vh;
+      width: 100vw;
+      position: absolute;
+     
+    
 }

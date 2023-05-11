@@ -34,8 +34,8 @@ $year-in-second : 30; // 1 Earth year = 30 sec
 }
  
 $sun: 30px;
-$base-orb : 70px;
-$distance-between-orbits: 70px;
+$base-orb : 60px;
+$distance-between-orbits: 60px;
 $mercury-orb : $base-orb; $mercury-pl: 4px; 
 $venus-orb : $mercury-orb + $distance-between-orbits; $venus-pl: 8px; 
 $earth-orb : $venus-orb + $distance-between-orbits; $earth-pl: 6px; 
@@ -58,9 +58,8 @@ $asteroids-belt-orb : ($mars-orb + $jupiter-orb) / 2; $asteroids-belt-pl: 210px;
 
 
 body{
-     background-color:#070724;
-    
-
+     background-color:#070722;
+     overflow-x: hidden;
 }
 
 .solar-syst{
@@ -71,7 +70,7 @@ body{
     width:2px;
     top:-2px;
     background:white;
-    box-shadow: stars(200, 1800);
+    box-shadow: stars(890, 1800);
     border-radius:100px;
   }
   margin:auto;
@@ -81,12 +80,13 @@ body{
   div{
     
     border-radius:1000px;
-    top:50%;
+    top:55%;
     left:50%;
     position:absolute;
     
     &:not(.sun){
-      border: 1px solid rgba(102, 166, 229, 0.12);
+      border: 1px solid rgba(187, 190, 192, 0.32);
+      transition: 300ms;
       &:before{
         left:50%;
         border-radius:100px;
@@ -107,7 +107,7 @@ body{
 }
 
 .sun{
- z-index: 100;
+ z-index: 20;
   background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
   height:$sun;
   width:$sun;
@@ -121,7 +121,7 @@ body{
 }
 
 .mercury{
-  z-index: 90;
+  z-index: 19;
   cursor: pointer;
   height: $mercury-orb;
   width: $mercury-orb;
@@ -142,7 +142,7 @@ body{
 }
 
 .venus{
-  z-index: 80;
+  z-index: 18;
   cursor: pointer;
   height: $venus-orb;
   width: $venus-orb;
@@ -160,7 +160,7 @@ body{
 }
 
 .earth{ 
-  z-index: 70;
+  z-index: 17;
   cursor: pointer;
   height: $earth-orb;
   width: $earth-orb;
@@ -190,7 +190,7 @@ body{
   }
 }
 .mars{
-  z-index: 60;
+  z-index: 16;
   cursor: pointer;
   height: $mars-orb;
   width: $mars-orb;
@@ -208,7 +208,7 @@ body{
 }
 
 .jupiter{ 
-  z-index: 50;
+  z-index: 15;
   cursor: pointer;
   height: $jupiter-orb;
   width: $jupiter-orb;
@@ -225,7 +225,7 @@ body{
   }
 }
 .saturn{
-  z-index: 40;
+  z-index: 14;
   cursor: pointer;
   height: $saturn-orb;
   width: $saturn-orb;
@@ -259,7 +259,7 @@ body{
 }
 
 .uranus{
-  z-index: 30;
+  z-index: 13;
   cursor: pointer;
   height: $uranus-orb;
   width: $uranus-orb;
@@ -277,7 +277,7 @@ body{
 }
 
 .neptune{
-  z-index: 20;
+  z-index: 12;
   cursor: pointer;
   height: $neptune-orb;
   width: $neptune-orb;

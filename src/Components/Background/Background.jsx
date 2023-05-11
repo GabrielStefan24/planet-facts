@@ -1,9 +1,7 @@
  import './Background.scss'
 
 const Background = () => {
-  return (
-   <img src="src\assets\background-stars.svg" alt="Background" className='stars' />
-  )
+  return <div className="stars"></div>;
 }
 
 export default Background

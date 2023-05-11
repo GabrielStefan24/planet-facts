@@ -1,10 +1,17 @@
 .nav{
-    z-index: 40;
-    width: 100vw;
-    height: 7vh;
-    position: fixed;
-    padding: 1.2rem 2rem;
+   width: 100vw;
+    height: 60px;
+    padding: 0 2rem;
+   
     border-bottom: 1px solid #37374e;
+    @media(min-width:768px){
+       height: 70px;
+   
+    }
+    @media(min-width:1024px){
+        height: 80px;
+     }
+  
 }
 .container{
     max-width: 1440px;
@@ -13,6 +20,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(min-width:768px){
+        flex-flow: column;
+    }
+    @media(min-width:1024px){
+        flex-flow: row;
+    }
   
 }
 
@@ -30,7 +43,7 @@
     &:hover{
         color: white;
     }
-    @media(min-width: 1026px){
+    @media(min-width: 768px){
         &::after{
             position: absolute;
             content: '';
@@ -63,4 +76,8 @@
     display: flex;
     gap: 2rem;
     letter-spacing: 1px;
+    display: none;
+    @media(min-width:768px){
+        display: flex;
+    }
 }
