@@ -1,5 +1,6 @@
 export const planetsData = [
   {
+    sectionColor: "hsl(194, 48%, 49%)",
     name: "Mercury",
     overview: {
       content:
@@ -28,6 +29,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(33, 82%, 61%)",
     name: "Venus",
     overview: {
       content:
@@ -55,6 +57,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(263, 67%, 51%)",
     name: "Earth",
     overview: {
       content:
@@ -82,6 +85,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(10, 63%, 51%)",
     name: "Mars",
     overview: {
       content:
@@ -109,6 +113,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(2, 78%, 73%)",
     name: "Jupiter",
     overview: {
       content:
@@ -137,6 +142,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(40, 73%, 46%)",
     name: "Saturn",
     overview: {
       content:
@@ -164,6 +170,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(169, 73%, 44%)",
     name: "Uranus",
     overview: {
       content:
@@ -191,6 +198,7 @@ export const planetsData = [
     },
   },
   {
+    sectionColor: "hsl(222, 87%, 56%)",
     name: "Neptune",
     overview: {
       content:

@@ -4,6 +4,7 @@
 .menu-icon{
     color: white;
     transition: 500ms;
+    cursor: pointer;
 }
 .mobile-menu{
     top: 60px;
@@ -22,7 +23,7 @@
     & a{
         text-decoration: none;
         font-size: 1.1rem;
-        font-family: "Antonio",sans-serif;
+        font-family: "Antonio",sans-serif; 
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 5px;

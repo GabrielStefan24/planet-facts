@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Planet from "../Components/Planet/Planet";
 
+
 function App() {
   return (
     <Router>
