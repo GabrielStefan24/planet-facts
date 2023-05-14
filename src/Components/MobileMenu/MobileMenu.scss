@@ -7,10 +7,11 @@
     cursor: pointer;
 }
 .mobile-menu{
+    overflow-y: hidden;
     top: 60px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 130%;
     position: absolute;
     background-color: #070722;
     z-index: 100;
@@ -22,12 +23,12 @@
     padding: 0rem 2rem;
     & a{
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         font-family: "Antonio",sans-serif; 
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 5px;
-        line-height: 45px;
+        line-height: 55px;
         color: white;
         width: 100%;
     }

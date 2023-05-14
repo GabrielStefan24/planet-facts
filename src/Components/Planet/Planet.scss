@@ -166,6 +166,8 @@
   letter-spacing: 1px;
 }
 .wiki{
+  z-index: 80;
+  cursor: pointer;
   color: #838391 ;
   font-size: clamp(16px,2vw,18px);
   font-weight: 600;
@@ -227,9 +229,15 @@
   transition: transform 350ms ease-in;
 }
 
-.button:hover .underline {
-  transform: scaleX(1);
+@media(max-width:768px){
+  .button:hover .underline {
+    transform: scaleX(1);
+  }
+  .button.active .underline {
+    transform: scaleX(1);
+  }
+  
 }
-.button.active .underline {
-  transform: scaleX(1);
+.parent{
+  overflow: hidden;
 }

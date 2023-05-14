@@ -4,6 +4,9 @@ import "./Planet.scss";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+
+
+
 const Planet = () => {
   const [currentView, setCurrentView] = useState("overview");
   const { planet } = useParams();
@@ -31,9 +34,18 @@ const Planet = () => {
     setCurrentView(view);
     console.log(view);
   };
+  let viewContent =
+    currentView === "overview"
+      ? "overview"
+      : currentView === "structure"
+      ? "structure"
+      : "geology";
+
 
   return (
-    <section className="section-container">
+    <motion.section
+
+    >
       <div className="planet-container">
         <div
           className="planet-image"
@@ -44,7 +56,6 @@ const Planet = () => {
             stiffness: 260,
             damping: 80,
           }}
-          key={planet}
         >
           {currentView === "overview" && (
             <motion.img
@@ -55,7 +66,7 @@ const Planet = () => {
                 stiffness: 260,
                 damping: 80,
               }}
-              key={planetInfo}
+              key={`${planetInfo.name}_overview`}
               src={planetInfo.images.planet}
               alt="Planet image"
               className="img"
@@ -70,7 +81,7 @@ const Planet = () => {
                 stiffness: 260,
                 damping: 80,
               }}
-              key={planetInfo}
+              key={`${planetInfo.name}_structure`}
               src={planetInfo.images.internal}
               alt="Planet image"
               className="img"
@@ -86,7 +97,7 @@ const Planet = () => {
                 stiffness: 260,
                 damping: 80,
               }}
-              key={planetInfo}
+              key={`${planetInfo.name}_geology`}
             >
               <img
                 src={planetInfo.images.planet}
@@ -101,20 +112,40 @@ const Planet = () => {
             </motion.div>
           )}
         </div>
-        <div className="planet-description">
+        <motion.div
+          key={planetInfo.name}
+          className="planet-description"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
+        >
           <h2>{planetInfo.name}</h2>
-          <p>{planetInfo.overview.content}</p>
+
+          <motion.p
+            key={planetInfo[viewContent].content}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2 }}
+          >
+            {planetInfo[viewContent].content}
+          </motion.p>
+
           <div className="wikipedia">
             <span className="source">Source: </span>
-            <a
-              href={`https://en.wikipedia.org/wiki/${planetInfo.name}`}
-              className="wiki"
-            >
+            <a href={planetInfo[viewContent].source} className="wiki">
               Wikipedia
             </a>
           </div>
-        </div>
-        <div className="planet-buttons">
+        </motion.div>
+        <motion.div
+          className="planet-buttons"
+          key={planetInfo.sectionColor}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+        >
           <button
             className={currentView === "overview" ? "button active" : "button"}
             onClick={() => handleButtonClick("overview")}
@@ -161,27 +192,36 @@ const Planet = () => {
               style={{ backgroundColor: planetInfo.sectionColor }}
             ></span>
           </button>
-        </div>
+        </motion.div>
       </div>
-      <div className="planet-info">
-        <div className="item">
-          <h3>Rotation time</h3>
-          <p>{planetInfo.rotation}</p>
-        </div>
-        <div className="item">
-          <h3>revolution time</h3>
-          <p>{planetInfo.revolution}</p>
-        </div>
-        <div className="item">
-          <h3>radius</h3>
-          <p>{planetInfo.radius}</p>
-        </div>
-        <div className="item">
-          <h3>average temp</h3>
-          <p>{planetInfo.temperature}</p>
-        </div>
+      <div className="parent">
+        <motion.div
+          key={planetInfo.id}
+          className="planet-info"
+          initial={{ y: "100%" }} // initial state: move the div down by the height of the viewport
+          animate={{ y: 0 }} // animate state: move the div back to its original position
+          exit={{ y: "100%" }} // exit state: move the div down by the height of the viewport
+          transition={{ type: "spring", damping: 15 }} // transition settings
+        >
+          <div className="item">
+            <h3>Rotation time</h3>
+            <p>{planetInfo.rotation}</p>
+          </div>
+          <div className="item">
+            <h3>revolution time</h3>
+            <p>{planetInfo.revolution}</p>
+          </div>
+          <div className="item">
+            <h3>radius</h3>
+            <p>{planetInfo.radius}</p>
+          </div>
+          <div className="item">
+            <h3>average temp</h3>
+            <p>{planetInfo.temperature}</p>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

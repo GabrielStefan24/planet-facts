@@ -5,20 +5,29 @@ import Navbar from "../Components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Planet from "../Components/Planet/Planet";
-
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
   return (
-    <Router>
+    <>
       <Navbar />
       <Background />
       <AnimatePresence>
         <Routes>
-          <Route path="/" element={<SolarSystem />}></Route>
-          <Route path="/:planet" element={<Planet />}></Route>
+          <Route
+            path="/"
+            element={<SolarSystem />}
+            key={location.pathname}
+          ></Route>
+          <Route
+            path="/:planet"
+            element={<Planet />}
+            key={location.pathname}
+          ></Route>
         </Routes>
       </AnimatePresence>
-    </Router>
+    </>
   );
 }
 

@@ -20,7 +20,7 @@ const MobileMenu = () => {
 
   return (
     <>
-      <div>
+      <div className="parent">
         {isMenuClicked ? (
           <>
             <AiOutlineClose
@@ -33,6 +33,7 @@ const MobileMenu = () => {
           <AiOutlineMenu className="menu-icon" size={24} onClick={toggleMenu} />
         )}
       </div>
+
       <AnimatePresence>
         {isMenuClicked && (
           <motion.div
