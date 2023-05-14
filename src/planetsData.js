@@ -1,3 +1,34 @@
+import planetMercury from "./assets/planet-mercury.svg";
+import planetMercuryInternal from "./assets/planet-mercury-internal.svg";
+import geologyMercury from "./assets/geology-mercury.png";
+
+import planetVenus from "./assets/planet-venus.svg";
+import planetVenusInternal from "./assets/planet-venus-internal.svg";
+import geologyVenus from "./assets/geology-venus.png";
+
+import planetEarth from "./assets/planet-earth.svg";
+import planetEarthInternal from "./assets/planet-earth-internal.svg";
+import geologyEarth from "./assets/geology-earth.png";
+
+import planetMars from "./assets/planet-mars.svg";
+import planetMarsInternal from "./assets/planet-mars-internal.svg";
+import geologyMars from "./assets/geology-mars.png";
+
+import planetJupiter from "./assets/planet-jupiter.svg";
+import planetJupiterInternal from "./assets/planet-jupiter-internal.svg";
+import geologyJupiter from "./assets/geology-jupiter.png";
+
+import planetSaturn from "./assets/planet-saturn.svg";
+import planetSaturnInternal from "./assets/planet-saturn-internal.svg";
+import geologySaturn from "./assets/geology-saturn.png";
+
+import planetUranus from "./assets/planet-uranus.svg";
+import planetUranusInternal from "./assets/planet-uranus-internal.svg";
+import geologyUranus from "./assets/geology-uranus.png";
+
+import planetNeptune from "./assets/planet-neptune.svg";
+import planetNeptuneInternal from "./assets/planet-neptune-internal.svg";
+import geologyNeptune from "./assets/geology-neptune.png";
 export const planetsData = [
   {
     id: 0,
@@ -24,9 +55,9 @@ export const planetsData = [
     radius: "2,439.7 KM",
     temperature: "430°c",
     images: {
-      planet: "./src/assets/planet-mercury.svg",
-      internal: "./src/assets/planet-mercury-internal.svg",
-      geology: "./src/assets/geology-mercury.png",
+      planet: planetMercury,
+      internal: planetMercuryInternal,
+      geology: geologyMercury,
     },
   },
   {
@@ -53,9 +84,9 @@ export const planetsData = [
     radius: "6,051.8 KM",
     temperature: "471°c",
     images: {
-      planet: "./src/assets/planet-venus.svg",
-      internal: "./src/assets/planet-venus-internal.svg",
-      geology: "./src/assets/geology-venus.png",
+      planet: planetVenus,
+      internal: planetVenusInternal,
+      geology: geologyVenus,
     },
   },
   {
@@ -82,9 +113,9 @@ export const planetsData = [
     radius: "6,371 KM",
     temperature: "16°c",
     images: {
-      planet: "./src/assets/planet-earth.svg",
-      internal: "./src/assets/planet-earth-internal.svg",
-      geology: "./src/assets/geology-earth.png",
+      planet: planetEarth,
+      internal: planetEarthInternal,
+      geology: geologyEarth,
     },
   },
   {
@@ -111,9 +142,9 @@ export const planetsData = [
     radius: "3,389.5 KM",
     temperature: "-28°c",
     images: {
-      planet: "./src/assets/planet-mars.svg",
-      internal: "./src/assets/planet-mars-internal.svg",
-      geology: "./src/assets/geology-mars.png",
+      planet: planetMars,
+      internal: planetMarsInternal,
+      geology: geologyMars,
     },
   },
   {
@@ -141,9 +172,9 @@ export const planetsData = [
     radius: "69,911 KM",
     temperature: "-108°c",
     images: {
-      planet: "./src/assets/planet-jupiter.svg",
-      internal: "./src/assets/planet-jupiter-internal.svg",
-      geology: "./src/assets/geology-jupiter.png",
+      planet: planetJupiter,
+      internal: planetJupiterInternal,
+      geology: geologyJupiter,
     },
   },
   {
@@ -170,9 +201,9 @@ export const planetsData = [
     radius: "58,232 KM",
     temperature: "-138°c",
     images: {
-      planet: "./src/assets/planet-saturn.svg",
-      internal: "./src/assets/planet-saturn-internal.svg",
-      geology: "./src/assets/geology-saturn.png",
+      planet: planetSaturn,
+      internal: planetSaturnInternal,
+      geology: geologySaturn,
     },
   },
   {
@@ -199,9 +230,9 @@ export const planetsData = [
     radius: "25,362 KM",
     temperature: "-195°c",
     images: {
-      planet: "./src/assets/planet-uranus.svg",
-      internal: "./src/assets/planet-uranus-internal.svg",
-      geology: "./src/assets/geology-uranus.png",
+      planet: planetUranus,
+      internal: planetUranusInternal,
+      geology: geologyUranus,
     },
   },
   {
@@ -215,7 +246,7 @@ export const planetsData = [
     },
     structure: {
       content:
-        "Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% to 10% of its mass and extends perhaps 10% to 20% of the way towards the core. Increasing concentrations of methane, ammonia and water are found in the lower regions.",
+        "Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% to 10% of its mass and extends perhaps 10% to 20% of the way towards the       core. Increasing concentrations of methane, ammonia and water are found in the lower regions.",
       source: "https://en.wikipedia.org/wiki/Neptune#Internal_structure",
     },
     geology: {
@@ -228,9 +259,9 @@ export const planetsData = [
     radius: "24,622 KM",
     temperature: "-201°c",
     images: {
-      planet: "./src/assets/planet-neptune.svg",
-      internal: "./src/assets/planet-neptune-internal.svg",
-      geology: "./src/assets/geology-neptune.png",
+      planet: planetNeptune,
+      internal: planetNeptuneInternal,
+      geology: geologyNeptune,
     },
   },
 ];
