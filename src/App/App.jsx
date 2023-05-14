@@ -13,7 +13,7 @@ function App() {
     <>
       <Navbar />
       <Background />
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <Routes>
           <Route
             path="/"

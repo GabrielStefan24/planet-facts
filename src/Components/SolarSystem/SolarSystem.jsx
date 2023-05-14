@@ -1,9 +1,41 @@
 import { Link } from "react-router-dom";
 import "./SolarSystem.scss";
+import { motion } from "framer-motion";
 
 const SolarSystem = () => {
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      y: "-100vh",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      y: "0",
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      y: "-100vh",
+      scale: 1.2,
+    },
+  };
+
+  const pageTransition = {
+    type: "spring",
+    stiffness: 100,
+    damping: 30,
+    duration: 1.2,
+  };
   return (
-    <div className="solar-syst">
+    <motion.div
+      className="solar-syst"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <div className="sun"></div>
       <Link to="/mercury">
         <div className="mercury"></div>
@@ -29,9 +61,8 @@ const SolarSystem = () => {
       <Link to="/pluto">
         <div className="pluto"></div>
       </Link>
-
       <div className="asteroids-belt"></div>
-    </div>
+    </motion.div>
   );
 };
 
