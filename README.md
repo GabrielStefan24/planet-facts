@@ -13,6 +13,16 @@ Greetings! I'm excited to share my solution for the Planets fact site - a challe
 
 ## Screenshots
 
+### Solar System
+<div align="center">
+  <img src="./src/assets/Solar.JPG" width="800" height="450" />
+</div>
+
+### Planets Page
+<div align="center">
+  <img src="./src/assets/Planet.jpg" width="800" height="450" />
+</div>
+
 
 
 ## Built With
