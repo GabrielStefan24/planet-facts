@@ -28,9 +28,9 @@
  
   & .img{
       margin: 0 auto;
-      width: 60%;
-      @media(min-width:768px){
       width: 40%;
+      @media(min-width:768px){
+      width: 35%;
      }
   }
 
